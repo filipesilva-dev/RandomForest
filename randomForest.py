@@ -27,18 +27,23 @@ print("==============================\n")
 
 print(SEMENTE)
 
-df = pd.read_csv("data.csv")
+df = pd.read_csv("Heart_Attack_Data_Set.csv")
 
-df = df.drop(columns=["id", "Unnamed: 32"])
+print("\n==============================")
+print("PRIMEIRAS LINHAS")
+print("==============================\n")
 
-df["diagnosis"] = df["diagnosis"].map({
-    "M": 1,
-    "B": 0
-})
+print(df.head())
 
-X = df.drop(columns=["diagnosis"])
+print("\n==============================")
+print("INFORMAÇÕES DA BASE")
+print("==============================\n")
 
-y = df["diagnosis"]
+print(df.info())
+
+X = df.drop(columns=["target"])
+
+y = df["target"]
 
 X_train, X_test, y_train, y_test = train_test_split(
     X,
@@ -133,7 +138,7 @@ plt.figure(figsize=(8, 6))
 
 disp = ConfusionMatrixDisplay(
     confusion_matrix=matriz,
-    display_labels=["Benigno", "Maligno"]
+    display_labels=["Sem Ataque", "Com Ataque"]
 )
 
 disp.plot(cmap="Blues")
