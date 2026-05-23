@@ -219,4 +219,5 @@ Durante a execução serão exibidos:
 
 # Autor
 Filipe Silva da Fonseca e Grupo
+---
 Projeto acadêmico desenvolvido para fins educacionais.
