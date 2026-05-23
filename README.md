@@ -1,28 +1,23 @@
-# Random Forest - Breast Cancer Wisconsin Dataset
+# Random Forest - Heart Attack Dataset
 
-Projeto desenvolvido para a disciplina de Inteligencia Artificial, com foco em classificação supervisionada utilizando o algoritmo Random Forest em Python.
+Projeto desenvolvido para a disciplina de Inteligencia Artificial, utilizando o algoritmo Random Forest para classificação supervisionada em Python.
 
 ---
 
 # Objetivo
 
-O projeto realiza a classificação de tumores mamários como:
+O objetivo do projeto é prever a possibilidade de ataque cardíaco com base em atributos clínicos e médicos presentes no dataset.
 
-- Benigno
-- Maligno
+O sistema realiza:
 
-utilizando o dataset Breast Cancer Wisconsin.
-
-O código executa:
-
-- carregamento da base
+- carregamento da base de dados
 - pré-processamento
 - separação treino/teste
 - treinamento do modelo
 - ajuste de hiperparâmetros
 - avaliação das métricas
 - geração de gráficos
-- análise da importância das variáveis
+- análise de importância das variáveis
 
 ---
 
@@ -33,7 +28,7 @@ Todos os arquivos devem estar na mesma pasta:
 ```text
 projeto/
 │
-├── data.csv
+├── Heart_Attack_Data_Set.csv
 ├── random_forest.py
 ├── README.md
 ```
@@ -113,7 +108,7 @@ pip install pandas scikit-learn matplotlib numpy
 O arquivo do dataset deve se chamar:
 
 ```text
-data.csv
+Heart_Attack_Data_Set.csv
 ```
 
 e deve permanecer na mesma pasta do código.
@@ -138,11 +133,10 @@ py random_forest.py
 
 # Funcionalidades do Código
 
-O sistema realiza automaticamente:
+O sistema executa automaticamente:
 
 - leitura da base de dados
-- remoção de colunas desnecessárias
-- conversão da variável alvo
+- separação das variáveis
 - balanceamento estratificado
 - geração de seed aleatória
 - treinamento do modelo Random Forest
@@ -208,15 +202,31 @@ Durante a execução serão exibidos:
 
 ---
 
+# Dataset Utilizado
+
+Heart Attack Dataset
+
+O dataset contém informações clínicas utilizadas para prever risco de ataque cardíaco.
+
+---
+
+# Algoritmo Utilizado
+
+Random Forest
+
+O Random Forest é um algoritmo de aprendizado supervisionado baseado em múltiplas árvores de decisão.
+
+---
+
 # Observações
 
-- O dataset utilizado é o Breast Cancer Wisconsin Dataset.
 - O projeto utiliza classificação supervisionada binária.
-- O algoritmo utilizado é Random Forest.
+- A variável alvo utilizada é `target`.
+- O sistema utiliza validação cruzada durante o ajuste de hiperparâmetros.
 
 ---
 
 # Autor
 Filipe Silva da Fonseca e Grupo
----
+
 Projeto acadêmico desenvolvido para fins educacionais.
