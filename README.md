@@ -36,7 +36,6 @@ projeto/
 ├── data.csv
 ├── random_forest.py
 ├── README.md
-└── venv/
 ```
 
 ---
